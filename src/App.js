@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import {ThemeProvider} from "styled-components";
-import { GlobalStyles } from "./components/globalStyles";
-import { lightTheme, darkTheme } from "./components/Themes";
+//import {ThemeProvider} from "styled-components";
+//import { GlobalStyles } from "./components/globalStyles";
+//import { lightTheme, darkTheme } from "./components/Themes";
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import './App.css';
+import './Dark.css';
+import './Light.css'
 
 const App = () => {
   const [result, setResult] = useState("");
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('/light.css');
   const themeToggler = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')
+    theme === '/light.css' ? setTheme('/dark.css') : setTheme('/light.css')
 }
 
   const handleClick = (e) => {
@@ -30,9 +31,6 @@ const App = () => {
   }
   return (
     <Router>
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-    <>
-    <GlobalStyles/>
     <Switch>
       <Route path="/">
     <div className="container">
@@ -63,8 +61,6 @@ const App = () => {
     </div>
     </Route>
     </Switch>
-    </>
-    </ThemeProvider>
     </Router>
   )
 };
