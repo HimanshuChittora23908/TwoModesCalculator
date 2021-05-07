@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/TwoModesCalculator/static/js/main.5b21c816.chunk.js",
+    "main.js.map": "/TwoModesCalculator/static/js/main.5b21c816.chunk.js.map",
+    "runtime-main.js": "/TwoModesCalculator/static/js/runtime-main.8e538ac9.js",
+    "runtime-main.js.map": "/TwoModesCalculator/static/js/runtime-main.8e538ac9.js.map",
+    "static/js/2.16f1484b.chunk.js": "/TwoModesCalculator/static/js/2.16f1484b.chunk.js",
+    "static/js/2.16f1484b.chunk.js.map": "/TwoModesCalculator/static/js/2.16f1484b.chunk.js.map",
+    "index.html": "/TwoModesCalculator/index.html",
+    "static/js/2.16f1484b.chunk.js.LICENSE.txt": "/TwoModesCalculator/static/js/2.16f1484b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e538ac9.js",
+    "static/js/2.16f1484b.chunk.js",
+    "static/js/main.5b21c816.chunk.js"
+  ]
+}
