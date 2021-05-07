@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
-//import {ThemeProvider} from "styled-components";
-//import { GlobalStyles } from "./components/globalStyles";
-//import { lightTheme, darkTheme } from "./components/Themes";
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import './Dark.css';
-import './Light.css'
+import { text1, text2 } from './text';
 
 const App = () => {
   const [result, setResult] = useState("");
-  const [theme, setTheme] = useState('/light.css');
-  const themeToggler = () => {
-    theme === '/light.css' ? setTheme('/dark.css') : setTheme('/light.css')
-}
+  const [chng, setchng] = useState(false);
+  const style = document.createElement('style');
+  style.innerHTML = chng ? text1 : text2
+  document.head.appendChild(style);
 
   const handleClick = (e) => {
     setResult(result.concat(e.target.name));
@@ -34,7 +30,7 @@ const App = () => {
     <Switch>
       <Route path="/">
     <div className="container">
-    <button onClick={themeToggler}>Switch Theme</button>
+    <button onClick={() => setchng(!chng)}>Switch Theme</button>
       <form>
         <input type="text" value={result} />
       </form>
